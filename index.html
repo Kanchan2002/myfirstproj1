@@ -26,22 +26,18 @@
       <li class="list-group-item">Item 2</li>
       <li class="list-group-item">Item 3</li>
       <li class="list-group-item">Item 4</li>
-      <li>new list</li>
     </ul>
    </div>
   </div>
   <script>
-    const items = document.getElementsByClassName('list-group-item');
-     items[2].style.backgroundColor = 'red';
-     for (let i = 0; i < items.length; i++) {
-        items[i].style.fontWeight = 'bold';
-        
-     }
-    const li = document.getElementsByTagName('li');
-     li[4].style.border = '2px solid grey'
-     li[4].style.height = '50px'
-     li[4].style.listStyle = 'none'
-     li[4].style.color = 'green'
+    const li = document.querySelectorAll('.list-group-item');
+      li[1].style.color = 'green'
+      for(let i = 0; i<li.length; i++){
+         if(i%2 != 0){
+            li[i].style.backgroundColor = 'green'
+            li[i].style.color = 'red'
+         }
+      }
   </script>
 </body>
 </html>
