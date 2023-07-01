@@ -30,14 +30,24 @@
    </div>
   </div>
   <script>
-    const li = document.querySelectorAll('.list-group-item');
-      li[1].style.color = 'green'
-      for(let i = 0; i<li.length; i++){
-         if(i%2 != 0){
-            li[i].style.backgroundColor = 'green'
-            li[i].style.color = 'red'
-         }
-      }
+    let ele = document.querySelector('#items');
+    ele.parentElement.style.border = '2px solid red';
+    ele.lastElementChild.innerHTML = 'hello';
+    console.log(ele.lastChild);//text node
+    ele.firstElementChild.innerHTML = 'firstelement';
+    console.log(ele.firstChild);//text node
+    console.log(ele.nextSibling);//text node
+    ele.nextElementSibling.style.color = 'yellow';
+    ele.previousElementSibling.style.color = 'yellowGreen';
+    console.log(ele.previousSibling);//text node
+    var btn = document.createElement("button");
+     btn.innerHTML = 'button';
+    ele.appendChild(btn);
+    btn.style.height = '45px'
+    btn.style.fontWeight = 'bold'
+    btn.style.backgroundColor = 'yellowGreen';
+    btn.setAttribute("href","https://www.javatpoint.com/");
+    
   </script>
 </body>
 </html>
